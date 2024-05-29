@@ -180,7 +180,7 @@ For some reason, the following errors are present when attempting to build `cbag
 - Error: ‘numeric_limits’ is not a member of ‘std’
 - Error: ‘optional’ in namespace ‘std’ does not name a template type
 
-To "solve" them, edit typedefs.h:
+To "solve" them, edit `typedefs.h`:
 
 ```bash
 
@@ -265,6 +265,13 @@ auto static check_zero
 ```bash
 
 ImportError: /home/nmendez/miniconda3/envs/bag_py3d7_c/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by /home/nmendez/asic/bag3_skywater130_workspace/BAG_framework/pybag/_build/lib/pybag/core.cpython-37m-x86_64-linux-gnu.so)
+
+```
+Update `Libgcc`
+
+```bash
+
+ conda install anaconda::libgcc
 
 ```
 
