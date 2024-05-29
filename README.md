@@ -109,7 +109,7 @@ cd boost_1_72_0
 
 ```
 
-In the resulting project-config.jam file, change the using python line to:
+In the resulting `project-config.jam file, change the using python line to:
 
 ```bash
 using python : 3.7 : /path/to/conda/env/envname : /path/to/conda/env/envname/include/python3.7m ;
@@ -131,7 +131,7 @@ Run:
 
 --with-python
 
-Not sure if I did this step correctly because there wasn't a "using python" line originally on the .jam file.
+Not sure if I did this step correctly because there wasn't a `using python` line originally on the `.jam file.
 
 ### 5. Activate environment
 
@@ -174,7 +174,7 @@ python3 setup.py install
 
 ### 8. Build and install pybag
 
-For some reason, the following errors are present when attempting to build cbag:
+For some reason, the following errors are present when attempting to build `cbag`:
 
 
 - Error: ‘numeric_limits’ is not a member of ‘std’
@@ -208,7 +208,7 @@ cd BAG_framework/pybag
 
 
 
-When building pybag, a few multiple definitions error occurs: 
+When building `pybag`, a few multiple definitions error occurs: 
 
 ```bash
 
@@ -221,7 +221,7 @@ When building pybag, a few multiple definitions error occurs:
 
 ```
 
-To "solve" them, add static on the functions definition
+To "solve" them, add `static` on the functions definition
 
 
 #### Modify name_unit_def.h
