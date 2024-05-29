@@ -287,6 +287,68 @@ Update `Libgcc`
 
 ```
 
+```bash
+
+WARNING: Error registering BLOSC filter for HDF5.  Default to LZF
+creating BAG project
+*WARNING* invalid literal for int() with base 10: ''.  Operating without Virtuoso.
+RuntimeError: module compiled against API version 0xe but this version of numpy is 0xd
+
+```
+
+Update `numpy` version of `conda`, with environment activated:
+
+```bash
+
+pip install numpy --upgrade
+
+```
+
+```bash
+
+WARNING: Error registering BLOSC filter for HDF5.  Default to LZF
+creating BAG project
+*WARNING* invalid literal for int() with base 10: ''.  Operating without Virtuoso.
+computing layout...
+[2024-05-29 16:50:09.996] [STDCellWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-29 16:50:09.997] [STDCellWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-29 16:50:09.997] [STDCellWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-29 16:50:09.997] [STDCellWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+computation done.
+creating layout...
+Traceback (most recent call last):
+  File "BAG_framework/run_scripts/gen_cell.py", line 82, in <module>
+    run_main(_prj, _args)
+  File "BAG_framework/run_scripts/gen_cell.py", line 68, in run_main
+    gen_netlist=args.gen_netlist)
+  File "/home/nmendez/asic/bag3_skywater130_workspace/BAG_framework/src/bag/core.py", line 479, in generate_cell
+    square_bracket=square_bracket)
+  File "/home/nmendez/asic/bag3_skywater130_workspace/BAG_framework/src/bag/layout/template.py", line 153, in batch_layout
+    self.batch_output(output, info_list, **kwargs)
+  File "/home/nmendez/asic/bag3_skywater130_workspace/BAG_framework/src/bag/util/cache.py", line 720, in batch_output
+    lay_map = get_gds_layer_map()
+  File "/home/nmendez/asic/bag3_skywater130_workspace/BAG_framework/src/bag/env.py", line 223, in get_gds_layer_map
+    raise ValueError(f'{ans} is not a file.')
+ValueError: /home/nmendez/asic/bag3_skywater130_workspace/skywater130/gds_setup/gds.layermap is not a file.
+
+> /home/nmendez/asic/bag3_skywater130_workspace/BAG_framework/src/bag/env.py(223)get_gds_layer_map()
+-> raise ValueError(f'{ans} is not a file.')
+(Pdb) 
+
+```
+
+(gds.layermap)[https://github.com/ucb-art/skywater-pdk-libs-sky130_bag3_pr/blob/d1979837776f4a8beddf0fd9cda3a2bb1dbb8d72/gds_setup/gds.layermap] is a symbolic link, which points to:
+
+```bash
+../workspace_setup/PDK/VirtuosoOA/libs/s8phirs_10r/s8phirs_10r.layermap
+
+```
+
+
+
+
+
+
 ### References
 
 #### Official documentation
