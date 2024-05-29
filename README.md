@@ -204,7 +204,6 @@ Add the following lines at the preamble:
 ```bash
 
 cd BAG_framework/pybag
-%export PYBAG_PYTHON=/home/user/miniconda3/envs/bag_py3d7_c/bin/python3
 ./run_test.sh 
 
 ```
