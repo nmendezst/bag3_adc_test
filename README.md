@@ -175,13 +175,23 @@ python3 setup.py install
 ```
 
 
-### 8. Build and install pybag
+### 8. Building cbag and pybag
+
+```bash
+
+cd BAG_framework/pybag
+./run_test.sh 
+
+```
 
 For some reason, the following errors are present when attempting to build `cbag`:
 
+```bash
 
-- Error: ‘numeric_limits’ is not a member of ‘std’
-- Error: ‘optional’ in namespace ‘std’ does not name a template type
+Error: ‘numeric_limits’ is not a member of ‘std’
+Error: ‘optional’ in namespace ‘std’ does not name a template type
+
+```
 
 To "solve" them, edit `typedefs.h`:
 
@@ -200,15 +210,6 @@ Add the following lines at the preamble:
 #include <optional>
 
 ```
-
-```bash
-
-cd BAG_framework/pybag
-./run_test.sh 
-
-```
-
-
 
 When building `pybag`, a few multiple definitions error occurs: 
 
