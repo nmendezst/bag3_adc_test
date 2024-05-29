@@ -10,12 +10,13 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 ```
 	
-### 2. Clone the SKY130 workspace 
+### 2. Clone the SKY130 workspace and initialize all submodules
 
 ```bash
 
 git clone https://github.com/ucb-art/bag3_skywater130_workspace
 cd bag3_skywater130_workspace
+git submodule update --init --recursive
 
 ```
 
