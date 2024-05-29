@@ -338,15 +338,12 @@ ValueError: /home/nmendez/asic/bag3_skywater130_workspace/skywater130/gds_setup/
 
 ```
 
-(gds.layermap)[https://github.com/ucb-art/skywater-pdk-libs-sky130_bag3_pr/blob/d1979837776f4a8beddf0fd9cda3a2bb1dbb8d72/gds_setup/gds.layermap] is a symbolic link, which points to:
+[gds.layermap](https://github.com/ucb-art/skywater-pdk-libs-sky130_bag3_pr/blob/d1979837776f4a8beddf0fd9cda3a2bb1dbb8d72/gds_setup/gds.layermap) is a symbolic link, which points to:
 
 ```bash
 ../workspace_setup/PDK/VirtuosoOA/libs/s8phirs_10r/s8phirs_10r.layermap
 
 ```
-
-
-
 
 
 
@@ -360,4 +357,6 @@ ValueError: /home/nmendez/asic/bag3_skywater130_workspace/skywater130/gds_setup/
 [‘numeric_limits’ is not a member of ‘std’](https://stackoverflow.com/questions/71296302/numeric-limits-is-not-a-member-of-std)
 
 [Multiple definition errors during gcc linking in Linux](https://stackoverflow.com/questions/69326932/multiple-definition-errors-during-gcc-linking-in-linux)
+
+[RuntimeError: module compiled against API version a but this version of numpy is 9](https://stackoverflow.com/questions/33859531/runtimeerror-module-compiled-against-api-version-a-but-this-version-of-numpy-is)
 
