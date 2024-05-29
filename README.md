@@ -297,7 +297,7 @@ RuntimeError: module compiled against API version 0xe but this version of numpy 
 
 ```
 
-Update `numpy` version of `conda`, with environment activated:
+Update `numpy` version of `conda`, with environment activated, and `./run_test.sh` again
 
 ```bash
 
