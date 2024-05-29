@@ -28,7 +28,7 @@ conda env create -f environment.yml
 ```
 
 
-### 4. Download the required programs and install them on the created environment. 
+### 4. Download the required packages and install them on the created environment 
 
 By default should be in: 
 
@@ -284,3 +284,14 @@ Update `Libgcc`
 
 
 ```
+
+### References
+
+#### Official documentation
+[BAG3++ 1.0 documentation](https://bag3-readthedocs.readthedocs.io/en/latest/)
+
+#### Collective wisdom
+
+[‘numeric_limits’ is not a member of ‘std’](https://stackoverflow.com/questions/71296302/numeric-limits-is-not-a-member-of-std)
+[Multiple definition errors during gcc linking in Linux](https://stackoverflow.com/questions/69326932/multiple-definition-errors-during-gcc-linking-in-linux)
+
