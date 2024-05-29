@@ -34,7 +34,7 @@ By default should be in:
 
 ```bash
 
-/home/user/miniconda3/envs/bag_py3d7_c 
+/home/${USER}/miniconda3/envs/bag_py3d7_c 
 
 ```
 
@@ -45,7 +45,7 @@ By default should be in:
 wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz
 tar -xvf cmake-3.17.0.tar.gz
 cd cmake-3.17.0
-./bootstrap --prefix=/home/nmendez/miniconda3/envs/bag_py3d7_c  --parallel=4
+./bootstrap --prefix=/home/${USER}/miniconda3/envs/bag_py3d7_c  --parallel=4
 make -j4
 sudo make install
 
@@ -57,7 +57,7 @@ sudo make install
 
 git clone https://github.com/Neargye/magic_enum.git
 cd magic_enum
-cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=FALSE -DMAGIC_ENUM_OPT_BUILD_TESTS=FALSE -DCMAKE_INSTALL_PREFIX=/home/nmendez/miniconda3/envs/bag_py3d7_c
+cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=FALSE -DMAGIC_ENUM_OPT_BUILD_TESTS=FALSE -DCMAKE_INSTALL_PREFIX=/home/${USER}/miniconda3/envs/bag_py3d7_c
 cmake --build build
 cd build
 sudo make install
@@ -70,7 +70,7 @@ sudo make install
 
 git clone https://github.com/jbeder/yaml-cpp.git
 cd yaml-cpp
-cmake -B_build -H. -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_PREFIX=/home/nmendez/miniconda3/envs/bag_py3d7_c
+cmake -B_build -H. -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_PREFIX=/home/${USER}/miniconda3/envs/bag_py3d7_c
 sudo cmake --build _build --target install -- -j 4
 
 ```
@@ -81,7 +81,7 @@ sudo cmake --build _build --target install -- -j 4
 git clone https://github.com/pantoniou/libfyaml.git
 cd libfyaml
 ./bootstrap.sh
-./configure --prefix=/home/nmendez/miniconda3/envs/bag_py3d7_c
+./configure --prefix=/home/${USER}/miniconda3/envs/bag_py3d7_c
 make -j12
 sudo make install
 ```
@@ -93,7 +93,7 @@ sudo make install
 wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.6/src/hdf5-1.10.6.tar.gz
 tar -xvf hdf5-1.10.6.tar.gz
 cd hdf5-1.10.6
-./configure --prefix=/home/nmendez/miniconda3/envs/bag_py3d7_c
+./configure --prefix=/home/${USER}/miniconda3/envs/bag_py3d7_c
 make -j24
 sudo make install
 ```
@@ -105,14 +105,14 @@ sudo make install
 wget https://boostorg.jfrog.io/artifactory/main/release/1.72.0/source/boost_1_72_0.tar.gz
 tar -xvf boost_1_72_0.tar.gz
 cd boost_1_72_0
-./bootstrap.sh --prefix=/home/nmendez/miniconda3/envs/bag_py3d7_c
+./bootstrap.sh --prefix=/home/${USER}/miniconda3/envs/bag_py3d7_c
 
 ```
 
 In the resulting `project-config.jam file, change the using python line to:
 
 ```bash
-using python : 3.7 : /path/to/conda/env/envname : /path/to/conda/env/envname/include/python3.7m ;
+using python : 3.7 : /home/${USER}/miniconda3/envs/bag_py3d7_c : =/home/${USER}/miniconda3/envs/bag_py3d7_c/include/python3.7m ;
 ```
 
 
@@ -131,7 +131,7 @@ Run:
 
 --with-python
 
-Not sure if I did this step correctly because there wasn't a `using python` line originally on the `.jam file.
+Not sure if I did this step correctly because there wasn't a `using python` line originally on the `.jam` file.
 
 ### 5. Activate environment
 
@@ -151,7 +151,9 @@ vim bag3_skywater130_workspace
 
 ```bash
 
-export BAG_TOOLS_ROOT=/home/nmendez/miniconda3/envs/bag_py3d7_c
+export BAG_TOOLS_ROOT=/home/${USER}/miniconda3/envs/bag_py3d7_c
+export BAG_TEMP_DIR=/home/${USER}/BAGTMP/skywater130
+
 
 ```
 
@@ -212,11 +214,11 @@ When building `pybag`, a few multiple definitions error occurs:
 
 ```bash
 
-/usr/bin/ld: name_unit.cpp.o (symbol from plugin): en la función `cbag::spirit::name_unit()':
+/usr/bin/ld: name_unit.cpp.o (symbol from plugin): in function `cbag::spirit::name_unit()':
 (.text+0x0): multiple definitions of `cbag::spirit::parser::check_str'; name.cpp.o (symbol from plugin):(.text+0x0): first defined here
-/usr/bin/ld: name_unit.cpp.o (symbol from plugin): en la función `cbag::spirit::name_unit()':
+/usr/bin/ld: name_unit.cpp.o (symbol from plugin): in function `cbag::spirit::name_unit()':
 (.text+0x0): multiple definitions of `cbag::spirit::parser::check_zero'; name.cpp.o (symbol from plugin):(.text+0x0): first defined here
-/usr/bin/ld: name_unit.cpp.o (symbol from plugin): en la función `cbag::spirit::name_unit()':
+/usr/bin/ld: name_unit.cpp.o (symbol from plugin): in function `cbag::spirit::name_unit()':
 (.text+0x0): multiple definitions of `cbag::spirit::parser::init_range'; name.cpp.o (symbol from plugin):(.text+0x0): first defined here
 
 ```
@@ -264,7 +266,7 @@ auto static check_zero
 
 ```bash
 
-ImportError: /home/nmendez/miniconda3/envs/bag_py3d7_c/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by /home/nmendez/asic/bag3_skywater130_workspace/BAG_framework/pybag/_build/lib/pybag/core.cpython-37m-x86_64-linux-gnu.so)
+ImportError: /home/${USER}/miniconda3/envs/bag_py3d7_c/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by /home/${USER}/asic/bag3_skywater130_workspace/BAG_framework/pybag/_build/lib/pybag/core.cpython-37m-x86_64-linux-gnu.so)
 
 ```
 Update `Libgcc`
@@ -290,7 +292,7 @@ Update `Libgcc`
 #### Official documentation
 [BAG3++ 1.0 documentation](https://bag3-readthedocs.readthedocs.io/en/latest/)
 
-#### Collective wisdom
+#### Collective wisdom of the ancients
 
 [‘numeric_limits’ is not a member of ‘std’](https://stackoverflow.com/questions/71296302/numeric-limits-is-not-a-member-of-std)
 
