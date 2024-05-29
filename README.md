@@ -208,7 +208,7 @@ cd BAG_framework/pybag
 
 
 
-When building pybag, a multiple definitions error ocurs: 
+When building pybag, a few multiple definitions error occurs: 
 
 ```bash
 
