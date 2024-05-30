@@ -394,12 +394,15 @@ top_cells[0].write_svg("AA_inv_chain.svg")
 
 #### Official documentation
 [BAG3++ 1.0 documentation](https://bag3-readthedocs.readthedocs.io/en/latest/)
+
 [gdstk](https://heitzmann.github.io/gdstk/)
 
 
 #### Repositories
 [BAG3++ Skywater 130 Workspace](https://github.com/ucb-art/bag3_skywater130_workspace)
+
 [Skywater primitives for BAG](https://github.com/ucb-art/skywater-pdk-libs-sky130_bag3_pr/tree/d1979837776f4a8beddf0fd9cda3a2bb1dbb8d72)
+
 [BAG3 SAR ADC Generator](https://github.com/ucb-art/skywater130_bag3_sar_adc)
 
 
