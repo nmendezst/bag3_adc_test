@@ -345,7 +345,7 @@ ValueError: /home/nmendez/asic/bag3_skywater130_workspace/skywater130/gds_setup/
 
 ```
 
-There is an open source version of the layermap file ([thanks to Felicia Guo](https://open-source-silicon.slack.com/archives/C016HUV935L/p1717040627916339?thread_ts=1716649165.989099&cid=C016HUV935L))
+There is an open source version of the layermap file ([thanks to Felicia Guo](https://open-source-silicon.slack.com/archives/C016HUV935L/p1717040627916339?thread_ts=1716649165.989099&cid=C016HUV935L)) [Linen.dev mirror](https://web.open-source-silicon.dev/t/18845398/channel-quickie-challenge-per-the-discussion-above-friday-ma#0b1ccee0-dc1b-4b79-9815-7d4076341b2e)
 
 ```bash
 
@@ -375,7 +375,9 @@ netlisting done: time taken = 0.03081732300006479
 
 Output files are in `gen_outputs\inv_chain_sch`, there is a `.cdl` netlist, a `.gds` layout and a `.log` report.
 
+`gdstk` render of the `.gds` layout:
 
+![svg]()
 
 
 
