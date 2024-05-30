@@ -404,7 +404,13 @@ cd data
 git clone https://github.com/ucb-art/bag3_sync_sar_adc_data_skywater130 bag3_sync_sar_adc
 ```
 
+To generate an top level 8-bit SAR ADC:
 
+```bash
+
+./gen_cell.sh bag3_sync_sar_adc/data/specs_gen/sar_lay/specs_slice_sync_bootstrap.yaml -raw -netlist
+
+```
 
 ### References
 
