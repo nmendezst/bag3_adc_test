@@ -395,14 +395,25 @@ top_cells[0].write_svg("AA_inv_chain.svg")
 In the `bag3_skywater130_workspace` directory:
 
 ```bash
+
 git clone https://github.com/ucb-art/bag3_sync_sar_adc
 
 ```
 
 ```bash
+
 cd data
 git clone https://github.com/ucb-art/bag3_sync_sar_adc_data_skywater130 bag3_sync_sar_adc
+
 ```
+Modify `.bashrc_pypath` to add the following line:
+```bash
+
+export PYTHONPATH="${PYTHONPATH}:${BAG_WORK_DIR}/bag3_sync_sar_adc/src"
+
+```
+
+
 
 To generate an top level 8-bit SAR ADC:
 
