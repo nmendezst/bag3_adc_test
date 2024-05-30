@@ -390,6 +390,20 @@ top_cells[0].write_svg("AA_inv_chain.svg")
 
 
 
+## 10. Testing the ADC generator
+
+In the `bag3_skywater130_workspace` directory:
+
+```bash
+
+git clone https://github.com/ucb-art/skywater130_bag3_sar_adc
+cd skywater130_bag3_sar_adc
+git submodule update --init --recursive
+
+```
+
+
+
 ### References
 
 #### Official documentation
