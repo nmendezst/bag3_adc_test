@@ -377,7 +377,18 @@ Output files are in `gen_outputs\inv_chain_sch`, there is a `.cdl` netlist, a `.
 
 `gdstk` render of the `.gds` layout:
 
-![svg]()
+```python
+import pathlib
+import gdstk
+
+library = gdstk.read_gds("AA_inv_chain.gds")
+top_cells = library.top_level()
+top_cells[0].write_svg("AA_inv_chain.svg")
+
+```
+
+
+<img src="https://github.com/nmendezst/bag3_adc_test/blob/08512f6f68c847fb9f52490dd249297b16a05caa/AA_inv_chain.svg"  width=75% height=75%>
 
 
 
