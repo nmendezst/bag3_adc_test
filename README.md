@@ -419,7 +419,7 @@ To generate an top level 8-bit SAR ADC:
 
 ```bash
 
-./gen_cell.sh bag3_sync_sar_adc/data/specs_gen/sar_lay/specs_slice_sync_bootstrap.yaml -raw -netlist
+./gen_cell.sh data/bag3_sync_sar_adc/specs_gen/sar_lay/specs_slice_sync_bootstrap.yaml -raw -netlist
 
 ```
 
