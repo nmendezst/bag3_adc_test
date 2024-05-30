@@ -422,7 +422,11 @@ To generate an top level 8-bit SAR ADC:
 ./gen_cell.sh bag3_sync_sar_adc/data/specs_gen/sar_lay/specs_slice_sync_bootstrap.yaml -raw -netlist
 
 ```
-```bash
+
+<details> 
+  <summary>Log </summary>
+  
+```bash  
 WARNING: Error registering BLOSC filter for HDF5.  Default to LZF
 creating BAG project
 *WARNING* invalid literal for int() with base 10: ''.  Operating without Virtuoso.
@@ -617,7 +621,9 @@ CM:  1
 computation done.
 creating netlist...
 netlisting done: time taken = 0.03970662599931529
-``
+```
+</details>
+
 
 
 <img src="https://github.com/nmendezst/bag3_adc_test/blob/b22365b5a32257534b4df5bcc5ff6597e5788b59/AAA_Slice_sync.svg"  width=75% height=75%>
