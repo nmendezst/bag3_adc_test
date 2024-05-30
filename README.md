@@ -371,7 +371,7 @@ creating netlist...
 netlisting done: time taken = 0.03081732300006479
 ```
 
-Output files are in `gen_outputs\inv_chain_sch`, there is a `.cdl` netlist, a `.gds` layout and a `.log` report.
+Output files are in [`gen_outputs\inv_chain_sch`](https://github.com/nmendezst/bag3_adc_test/tree/main/gen_outputs/inv_chain_sch), there is a `.cdl` netlist, a `.gds` layout and a `.log` report.
 
 `gdstk` render of the `.gds` layout:
 
@@ -623,6 +623,9 @@ creating netlist...
 netlisting done: time taken = 0.03970662599931529
 ```
 </details>
+
+
+Output files are in [`gen_outputs\bag3_sync_sar_adc/AAAA_SAR_lay_sky_check`](https://github.com/nmendezst/bag3_adc_test/tree/main/gen_outputs/bag3_sync_sar_adc/AAAA_SAR_lay_sky_check), there is a `.cdl` netlist, a `.gds` layout and a `.log` report.
 
 
 
