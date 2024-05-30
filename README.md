@@ -422,6 +422,203 @@ To generate an top level 8-bit SAR ADC:
 ./gen_cell.sh bag3_sync_sar_adc/data/specs_gen/sar_lay/specs_slice_sync_bootstrap.yaml -raw -netlist
 
 ```
+```bash
+WARNING: Error registering BLOSC filter for HDF5.  Default to LZF
+creating BAG project
+*WARNING* invalid literal for int() with base 10: ''.  Operating without Virtuoso.
+computing layout...
+[2024-05-30 16:23:13.290] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:13.291] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:13.291] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:13.473] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:13.474] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:13.476] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:13.477] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:13.504] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:19.506] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:19.506] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:19.689] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:19.690] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:19.692] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.305] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.509] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.511] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.577] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.577] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.578] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.578] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.579] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.644] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.645] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.645] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.686] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.686] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.686] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.687] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.687] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.716] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.717] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.717] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.759] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.760] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.760] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.760] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.761] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.787] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.787] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.788] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.805] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.805] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.806] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.806] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.806] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.818] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.819] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.819] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.844] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.844] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.844] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.845] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.845] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.857] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.857] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.858] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.875] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.876] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.876] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.876] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.876] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.889] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.890] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.890] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.915] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.915] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.915] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.916] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.916] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.934] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.934] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.934] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.992] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.993] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:26.994] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+TIDX LIST:  [HalfInt(31.5), HalfInt(32.5), HalfInt(33.5), HalfInt(34.5), HalfInt(35.5), HalfInt(36.5), HalfInt(37.5), HalfInt(38.5), HalfInt(39.5), HalfInt(40.5), HalfInt(41.5), HalfInt(42.5), HalfInt(43.5), HalfInt(44.5), HalfInt(45.5), HalfInt(46.5), HalfInt(47.5), HalfInt(48.5), HalfInt(49.5), HalfInt(53.5), HalfInt(54.5), HalfInt(55.5), HalfInt(56.5)]
+TIDX LIST:  [HalfInt(63.5), HalfInt(64.5), HalfInt(65.5), HalfInt(66.5), HalfInt(67.5), HalfInt(68.5), HalfInt(69.5), HalfInt(70.5), HalfInt(71.5), HalfInt(72.5), HalfInt(73.5), HalfInt(74.5), HalfInt(75.5), HalfInt(76.5), HalfInt(77.5), HalfInt(78.5), HalfInt(79.5), HalfInt(80.5), HalfInt(81.5), HalfInt(85.5), HalfInt(86.5), HalfInt(87.5), HalfInt(88.5)]
+TIDX LIST:  [HalfInt(95.5), HalfInt(96.5), HalfInt(97.5), HalfInt(98.5), HalfInt(99.5), HalfInt(100.5), HalfInt(101.5), HalfInt(102.5), HalfInt(103.5), HalfInt(104.5), HalfInt(105.5), HalfInt(106.5), HalfInt(107.5), HalfInt(108.5), HalfInt(109.5), HalfInt(110.5), HalfInt(111.5), HalfInt(112.5), HalfInt(113.5), HalfInt(117.5), HalfInt(118.5), HalfInt(119.5)]
+[2024-05-30 16:23:28.050] [MOSBaseTapWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-30 16:23:28.050] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.051] [MOSBaseTapWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-30 16:23:28.051] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.052] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.052] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.052] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.052] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.052] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.052] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.053] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.054] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.055] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.118] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.119] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.330] [MOSBaseTapWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-30 16:23:28.331] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.331] [MOSBaseTapWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-30 16:23:28.331] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.331] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.331] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.331] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.331] [MOSBaseTapWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.367] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.367] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.446] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.470] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.470] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.471] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.471] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.527] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.552] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.552] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.553] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.553] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.568] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 16:23:28.568] [GenericWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+computation done.
+creating layout...
+layout done: time taken = 0.11354740400020091
+computing schematic...
+/home/nmendez/asic/bag3_skywater130_workspace/bag3_sync_sar_adc/src/bag3_sync_sar_adc/schematic/bootstrap.py:85: UserWarning: Doesn't implement dummy sampling sw
+  warnings.warn("Doesn't implement dummy sampling sw")
+CM:  1
+computation done.
+creating netlist...
+netlisting done: time taken = 0.03970662599931529
+``
+
 
 <img src="https://github.com/nmendezst/bag3_adc_test/blob/b22365b5a32257534b4df5bcc5ff6597e5788b59/AAA_Slice_sync.svg"  width=75% height=75%>
 
