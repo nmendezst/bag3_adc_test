@@ -1,0 +1,1130 @@
+.INCLUDE /home/nmendez/asic/bag3_skywater130_workspace/skywater130/calibre_setup/source.added
+
+*.BIPOLAR
+*.RESI = 2000
+*.SCALE METER
+*.MEGA
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+.PARAM
+
+
+* Copyright 2019-2021 SkyWater PDK Authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     https://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+* This code is *alternatively* available under a BSD-3-Clause license, see
+* details in the README.md at the top level and the license text at
+* https://github.com/google/skywater-pdk-libs-sky130_bag3_pr/blob/master/LICENSE.alternative
+*
+* SPDX-License-Identifier: BSD-3-Clause OR Apache 2.0
+
+.SUBCKT nmos4_hv B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B nhv l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT nmos4_hvesd B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B nhvesd l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT nmos4_svt B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B nshort l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT nmos4_lvt B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B nlowvt l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT nmos4_standard B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B nshort l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT pmos4_hv B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B phv l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT pmos4_hvesd B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B phvesd l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT pmos4_svt B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B pshort l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT pmos4_lvt B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B plowvt l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT pmos4_hvt B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B phighvt l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT pmos4_standard B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 D G S B pshort l=l*1.0e6 w=w*1.0e6 m=nf mult=1
+.ENDS
+
+.SUBCKT res_metal_1 MINUS PLUS
+*.PININFO MINUS:B PLUS:B
+RR0 PLUS MINUS mrm1  m=1 w=w*1.0e6 l=l*1.0e6
+.ENDS
+
+.SUBCKT res_metal_2 MINUS PLUS
+*.PININFO MINUS:B PLUS:B
+RR0 PLUS MINUS mrm2  m=1 w=w*1.0e6 l=l*1.0e6
+.ENDS
+
+.SUBCKT res_metal_3 MINUS PLUS
+*.PININFO MINUS:B PLUS:B
+RR0 PLUS MINUS mrm3  m=1 w=w*1.0e6 l=l*1.0e6
+.ENDS
+
+.SUBCKT res_metal_4 MINUS PLUS
+*.PININFO MINUS:B PLUS:B
+RR0 PLUS MINUS mrm4  m=1 w=w*1.0e6 l=l*1.0e6
+.ENDS
+
+.SUBCKT res_metal_5 MINUS PLUS
+*.PININFO MINUS:B PLUS:B
+RR0 PLUS MINUS mrm5  m=1 w=w*1.0e6 l=l*1.0e6
+.ENDS
+
+.SUBCKT res_standard BULK MINUS PLUS
+*.PININFO BULK:B MINUS:B PLUS:B
+xR0 PLUS MINUS BULK xhrpoly m=1 w=w*1.0e6 l=l*1.0e6
+.ENDS
+
+.SUBCKT res_high_res BULK MINUS PLUS
+*.PININFO BULK:B MINUS:B PLUS:B
+xR0 PLUS MINUS BULK xuhrpoly m=1 w=w*1.0e6 l=l*1.0e6
+.ENDS
+
+.SUBCKT mim_standard BOT TOP
+*.PININFO BOT:B TOP:B
+CC0 TOP BOT xcmimc2 w=unit_width*1.0e6 l=unit_height*1.0e6 m=num_rows*num_cols
+.ENDS
+
+.SUBCKT mim_45 BOT TOP
+*.PININFO BOT:B TOP:B
+CC0 TOP BOT xcmimc2 w=unit_width*1.0e6 l=unit_height*1.0e6 m=num_rows*num_cols
+.ENDS
+
+.SUBCKT mim_34 BOT TOP
+*.PININFO BOT:B TOP:B
+CC0 TOP BOT xcmimc1 w=unit_width*1.0e6 l=unit_height*1.0e6 m=num_rows*num_cols
+.ENDS
+
+
+.SUBCKT bootstrap_1 in sample sample_b out vg VDD VSS cap_bot cap_top
+*.PININFO in:I sample:I sample_b:I out:O vg:O VDD:B VSS:B cap_bot:B cap_top:B
+XCAP_N VSS cap_bot sample_b VSS / nmos4_standard l=150n nf=12 w=420n
+XCAP_P cap_top cap_top vg VDD / pmos4_standard l=150n nf=24 w=550n
+XINV_N VSS vmid sample cap_bot / nmos4_standard l=150n nf=4 w=420n
+XINV_P VDD vmid sample VDD / pmos4_standard l=150n nf=16 w=550n
+XMID VSS vmid vg cap_bot / nmos4_standard l=150n nf=8 w=420n
+XOFF_N0 VSS rst_mid VDD vg / nmos4_standard l=150n nf=12 w=420n
+XOFF_N1 VSS VSS sample_b rst_mid / nmos4_standard l=150n nf=20 w=420n
+XON_N VSS in vg cap_bot / nmos4_standard l=150n nf=20 w=420n
+XON_P cap_top cap_top vmid vg / pmos4_standard l=150n nf=20 w=550n
+XSAMPLE VSS out vg in / nmos4_standard l=150n nf=64 w=420n
+X_CBOOT cap_bot cap_top / mim_34 num_cols=1 num_rows=1 unit_height=24u
++ unit_width=11u
+.ENDS
+
+
+.SUBCKT bootstrap_diff sample sample_b vg_n vg_p VDD VSS cap_bot_n cap_bot_p
++ cap_top_n cap_top_p out_n out_p sig_n sig_p
+*.PININFO sample:I sample_b:I vg_n:O vg_p:O VDD:B VSS:B cap_bot_n:B cap_bot_p:B
+*+ cap_top_n:B cap_top_p:B out_n:B out_p:B sig_n:B sig_p:B
+XN sig_n sample sample_b out_n vg_n VDD VSS cap_bot_n cap_top_n / bootstrap_1
+XP sig_p sample sample_b out_p vg_p VDD VSS cap_bot_p cap_top_p / bootstrap_1
+.ENDS
+
+
+.SUBCKT bootstrap in sample sample_b out<8> out<7> out<6> out<5> out<4> out<3>
++ out<2> out<1> out<0> vg VDD VSS cap_bot cap_top
+*.PININFO in:I sample:I sample_b:I out<8>:O out<7>:O out<6>:O out<5>:O out<4>:O
+*+ out<3>:O out<2>:O out<1>:O out<0>:O vg:O VDD:B VSS:B cap_bot:B cap_top:B
+XCAP_N VSS cap_bot sample_b VSS / nmos4_standard l=150n nf=12 w=420n
+XCAP_P cap_top cap_top vg VDD / pmos4_standard l=150n nf=24 w=550n
+XINV_N VSS vmid sample cap_bot / nmos4_standard l=150n nf=4 w=420n
+XINV_P VDD vmid sample VDD / pmos4_standard l=150n nf=16 w=550n
+XMID VSS vmid vg cap_bot / nmos4_standard l=150n nf=8 w=420n
+XOFF_N0 VSS rst_mid VDD vg / nmos4_standard l=150n nf=12 w=420n
+XOFF_N1 VSS VSS sample_b rst_mid / nmos4_standard l=150n nf=20 w=420n
+XON_N VSS in vg cap_bot / nmos4_standard l=150n nf=20 w=420n
+XON_P cap_top cap_top vmid vg / pmos4_standard l=150n nf=20 w=550n
+XSAMPLE_0 VSS out<0> vg in / nmos4_standard l=150n nf=8 w=420n
+XSAMPLE_1 VSS out<1> vg in / nmos4_standard l=150n nf=8 w=420n
+XSAMPLE_2 VSS out<2> vg in / nmos4_standard l=150n nf=8 w=420n
+XSAMPLE_3 VSS out<3> vg in / nmos4_standard l=150n nf=16 w=420n
+XSAMPLE_4 VSS out<4> vg in / nmos4_standard l=150n nf=16 w=420n
+XSAMPLE_5 VSS out<5> vg in / nmos4_standard l=150n nf=16 w=420n
+XSAMPLE_6 VSS out<6> vg in / nmos4_standard l=150n nf=32 w=420n
+XSAMPLE_7 VSS out<7> vg in / nmos4_standard l=150n nf=32 w=420n
+XSAMPLE_8 VSS out<8> vg in / nmos4_standard l=150n nf=32 w=420n
+X_CBOOT cap_bot cap_top / mim_34 num_cols=1 num_rows=1 unit_height=24u
++ unit_width=11u
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg34 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=34 w=420n
+.ENDS
+
+
+.SUBCKT sampler_top sam sam_b sig_n sig_p vg_cm vg_n vg_p VDD VSS out_n<8>
++ out_n<7> out_n<6> out_n<5> out_n<4> out_n<3> out_n<2> out_n<1> out_n<0>
++ out_n_bot out_p<8> out_p<7> out_p<6> out_p<5> out_p<4> out_p<3> out_p<2>
++ out_p<1> out_p<0> out_p_bot vcm
+*.PININFO sam:I sam_b:I sig_n:I sig_p:I vg_cm:O vg_n:O vg_p:O VDD:B VSS:B
+*+ out_n<8>:B out_n<7>:B out_n<6>:B out_n<5>:B out_n<4>:B out_n<3>:B out_n<2>:B
+*+ out_n<1>:B out_n<0>:B out_n_bot:B out_p<8>:B out_p<7>:B out_p<6>:B out_p<5>:B
+*+ out_p<4>:B out_p<3>:B out_p<2>:B out_p<1>:B out_p<0>:B out_p_bot:B vcm:B
+XCM sam sam_b vg_cm vg_cm VDD VSS net12 net11 net8 net7 vcm vcm out_n_bot
++ out_p_bot / bootstrap_diff
+XN sig_n sam sam_b out_n<8> out_n<7> out_n<6> out_n<5> out_n<4> out_n<3>
++ out_n<2> out_n<1> out_n<0> vg_n VDD VSS net6 net19 / bootstrap
+XP sig_p sam sam_b out_p<8> out_p<7> out_p<6> out_p<5> out_p<4> out_p<3>
++ out_p<2> out_p<1> out_p<0> vg_p VDD VSS net3 net2 / bootstrap
+XSW_CM_N VSS out_n_bot vg_cm out_p_bot / nmos4_standard_w84_l30_seg34
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg4 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=4 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg4 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=4 w=550n
+.ENDS
+
+
+.SUBCKT inv_2 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg4
+XP VDD out in VDD / pmos4_standard_w110_l30_seg4
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg12 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=12 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg12 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=12 w=550n
+.ENDS
+
+
+.SUBCKT inv_11 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg12
+XP VDD out in VDD / pmos4_standard_w110_l30_seg12
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg32 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=32 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg32 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=32 w=550n
+.ENDS
+
+
+.SUBCKT inv_12 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg32
+XP VDD out in VDD / pmos4_standard_w110_l30_seg32
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg64 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=64 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg64 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=64 w=550n
+.ENDS
+
+
+.SUBCKT inv_10 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg64
+XP VDD out in VDD / pmos4_standard_w110_l30_seg64
+.ENDS
+
+
+.SUBCKT inv_chain_6 in out outb VDD VSS
+*.PININFO in:I out:O outb:O VDD:B VSS:B
+XINV0 in mid<0> VDD VSS / inv_2
+XINV1 mid<0> mid<1> VDD VSS / inv_11
+XINV2 mid<1> outb VDD VSS / inv_12
+XINV3 outb out VDD VSS / inv_10
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg2 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=2 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg2 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=2 w=550n
+.ENDS
+
+
+.SUBCKT inv_9 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg2
+XP VDD out in VDD / pmos4_standard_w110_l30_seg2
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg8 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=8 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg8 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=8 w=550n
+.ENDS
+
+
+.SUBCKT inv in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg8
+XP VDD out in VDD / pmos4_standard_w110_l30_seg8
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg24 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=24 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg24 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=24 w=550n
+.ENDS
+
+
+.SUBCKT inv_1 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg24
+XP VDD out in VDD / pmos4_standard_w110_l30_seg24
+.ENDS
+
+
+.SUBCKT inv_chain_5 in out outb VDD VSS
+*.PININFO in:I out:O outb:O VDD:B VSS:B
+XINV0 in mid<0> VDD VSS / inv_9
+XINV1 mid<0> mid<1> VDD VSS / inv
+XINV2 mid<1> outb VDD VSS / inv_1
+XINV3 outb out VDD VSS / inv_10
+.ENDS
+
+
+.SUBCKT inv_chain_4 in out outb VDD VSS
+*.PININFO in:I out:O outb:O VDD:B VSS:B
+XINV0 in mid<0> VDD VSS / inv_9
+XINV1 mid<0> out VDD VSS / inv_2
+XINV2 out outb VDD VSS / inv_2
+.ENDS
+
+
+.SUBCKT current_summer in<1> in<0> out NC
+*.PININFO in<1>:I in<0>:I out:O NC:B
+RXTH_1 in<1> out 0 $[SH]
+RXTH_0 in<0> out 0 $[SH]
+.ENDS
+
+
+.SUBCKT pmos4_standard_stack2_w110_l30_seg2 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XP_1 b m<1> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_0 b m<0> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_3 b d g<1> m<1> / pmos4_standard l=150n nf=1 w=550n
+XP_2 b d g<1> m<0> / pmos4_standard l=150n nf=1 w=550n
+.ENDS
+
+
+.SUBCKT nor2 in<1> in<0> out VDD VSS
+*.PININFO in<1>:I in<0>:I out:O VDD:B VSS:B
+XN_1 VSS out in<1> VSS / nmos4_standard_w84_l30_seg2
+XN_0 VSS out in<0> VSS / nmos4_standard_w84_l30_seg2
+XP VDD out in<1> in<0> VDD / pmos4_standard_stack2_w110_l30_seg2
+.ENDS
+
+
+.SUBCKT nmos4_standard_stack2_w84_l30_seg2 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XN_1 b m<1> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_0 b m<0> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_3 b d g<1> m<1> / nmos4_standard l=150n nf=1 w=420n
+XN_2 b d g<1> m<0> / nmos4_standard l=150n nf=1 w=420n
+.ENDS
+
+
+.SUBCKT inv_tristate_4 en enb in out VDD VSS
+*.PININFO en:I enb:I in:I out:O VDD:B VSS:B
+XN VSS out en in VSS / nmos4_standard_stack2_w84_l30_seg2
+XP VDD out enb in VDD / pmos4_standard_stack2_w110_l30_seg2
+.ENDS
+
+
+.SUBCKT nmos4_standard_stack2_w84_l30_seg1 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XN_0 b m g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_1 b d g<1> m / nmos4_standard l=150n nf=1 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_stack2_w110_l30_seg1 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XP_0 b m g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_1 b d g<1> m / pmos4_standard l=150n nf=1 w=550n
+.ENDS
+
+
+.SUBCKT inv_tristate_5 en enb in out VDD VSS
+*.PININFO en:I enb:I in:I out:O VDD:B VSS:B
+XN VSS out en in VSS / nmos4_standard_stack2_w84_l30_seg1
+XP VDD out enb in VDD / pmos4_standard_stack2_w110_l30_seg1
+.ENDS
+
+
+.SUBCKT rst_latch clk clkb in rst out VDD VSS
+*.PININFO clk:I clkb:I in:I rst:I out:O VDD:B VSS:B
+XCM fb inb outb NC / current_summer
+XNOR outb rst out VDD VSS / nor2
+XTBUF clk clkb in inb VDD VSS / inv_tristate_4
+XTFB clkb clk out fb VDD VSS / inv_tristate_5
+.ENDS
+
+
+.SUBCKT rst_flop_1 clk in rst out VDD VSS
+*.PININFO clk:I in:I rst:I out:O VDD:B VSS:B
+XB clk clkb VDD VSS / inv_2
+XM clkb clk in rst mid VDD VSS / rst_latch
+XS clk clkb mid rst out VDD VSS / rst_latch
+.ENDS
+
+
+.SUBCKT inv_6 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg4
+XP VDD out in VDD / pmos4_standard_w110_l30_seg4
+.ENDS
+
+
+.SUBCKT inv_4 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg2
+XP VDD out in VDD / pmos4_standard_w110_l30_seg2
+.ENDS
+
+
+.SUBCKT inv_tristate en enb in out VDD VSS
+*.PININFO en:I enb:I in:I out:O VDD:B VSS:B
+XN VSS out en in VSS / nmos4_standard_stack2_w84_l30_seg2
+XP VDD out enb in VDD / pmos4_standard_stack2_w110_l30_seg2
+.ENDS
+
+
+.SUBCKT inv_tristate_1 en enb in out VDD VSS
+*.PININFO en:I enb:I in:I out:O VDD:B VSS:B
+XN VSS out en in VSS / nmos4_standard_stack2_w84_l30_seg1
+XP VDD out enb in VDD / pmos4_standard_stack2_w110_l30_seg1
+.ENDS
+
+
+.SUBCKT latch clk clkb in out VDD VSS
+*.PININFO clk:I clkb:I in:I out:O VDD:B VSS:B
+XBUF outb out VDD VSS / inv_4
+XCM fb inb outb NC / current_summer
+XTBUF clk clkb in inb VDD VSS / inv_tristate
+XTFB clkb clk out fb VDD VSS / inv_tristate_1
+.ENDS
+
+
+.SUBCKT flop_2 clk in out VDD VSS
+*.PININFO clk:I in:I out:O VDD:B VSS:B
+XB clk clkb VDD VSS / inv_6
+XM clkb clk in mid VDD VSS / latch
+XS clk clkb mid out VDD VSS / latch
+.ENDS
+
+
+.SUBCKT nand2 in<1> in<0> out VDD VSS
+*.PININFO in<1>:I in<0>:I out:O VDD:B VSS:B
+XN VSS out in<1> in<0> VSS / nmos4_standard_stack2_w84_l30_seg2
+XP_1 VDD out in<1> VDD / pmos4_standard_w110_l30_seg2
+XP_0 VDD out in<0> VDD / pmos4_standard_w110_l30_seg2
+.ENDS
+
+
+.SUBCKT sar_sync_counter clk_in clk_out clk_out_b comp_clk comp_clkb VDD VSS
+*.PININFO clk_in:I clk_out:O clk_out_b:O comp_clk:O comp_clkb:O VDD:B VSS:B
+XBUF_CLKDIV rst clk_out_b clk_out VDD VSS / inv_chain_6
+XBUF_COMPCLK clkbuf comp_clk comp_clkb VDD VSS / inv_chain_5
+XBUF_IN clk_in clkbuf clkb VDD VSS / inv_chain_4
+XFLOP_DIV0 clkb xb2 rst x2 VDD VSS / rst_flop_1
+XFLOP_DIV1 xb2 xb4 rst x4 VDD VSS / rst_flop_1
+XFLOP_DIV2 xb4 xb8 rst x8 VDD VSS / rst_flop_1
+XFLOP_DIV3 xb8 xb16 rst x16 VDD VSS / rst_flop_1
+XFLOP_RST clkb rst_comb rst VDD VSS / flop_2
+XINV_DIV0 x2 xb2 VDD VSS / inv_9
+XINV_DIV1 x4 xb4 VDD VSS / inv_9
+XINV_DIV2 x8 xb8 VDD VSS / inv_9
+XINV_DIV3 x16 xb16 VDD VSS / inv_9
+XINV_RST net2 rst_comb VDD VSS / inv_9
+XNAND in1 in2 net2 VDD VSS / nand2
+XNOR1 xb2 x4 in1 VDD VSS / nor2
+XNOR2 x8 xb16 in2 VDD VSS / nor2
+.ENDS
+
+
+.SUBCKT inv_chain in mid out VDD VSS
+*.PININFO in:I mid:O out:O VDD:B VSS:B
+XINV0 in mid VDD VSS / inv
+XINV1 mid out VDD VSS / inv_1
+.ENDS
+
+
+.SUBCKT comp_strongarm_core clk inn inp midn midp outn outp VDD VSS
+*.PININFO clk:I inn:I inp:I midn:O midp:O outn:O outp:O VDD:B VSS:B
+XINN VSS midp inn tail / nmos4_standard l=150n nf=16 w=420n
+XINP VSS midn inp tail / nmos4_standard l=150n nf=16 w=420n
+XNFBN VSS outn outp midn / nmos4_standard l=150n nf=16 w=420n
+XNFBP VSS outp outn midp / nmos4_standard l=150n nf=16 w=420n
+XPFBN VDD outn outp VDD / pmos4_standard l=150n nf=16 w=550n
+XPFBP VDD outp outn VDD / pmos4_standard l=150n nf=16 w=550n
+XSWMN VDD midn clk VDD / pmos4_standard l=150n nf=8 w=550n
+XSWMP VDD midp clk VDD / pmos4_standard l=150n nf=8 w=550n
+XSWON VDD outn clk VDD / pmos4_standard l=150n nf=8 w=550n
+XSWOP VDD outp clk VDD / pmos4_standard l=150n nf=8 w=550n
+XTAIL VSS tail clk VSS / nmos4_standard l=150n nf=16 w=420n
+.ENDS
+
+
+.SUBCKT sar_comp clk clkb inn inp osn osp outn outn_m outp outp_m VDD VSS
+*.PININFO clk:I clkb:I inn:I inp:I osn:I osp:I outn:O outn_m:O outp:O outp_m:O
+*+ VDD:B VSS:B
+XBUF_1 outp_mid midp outp VDD VSS / inv_chain
+XBUF_0 outn_mid midn outn VDD VSS / inv_chain
+XSA clk inn inp net02 net01 outn_mid outp_mid VDD VSS / comp_strongarm_core
+.ENDS
+
+
+.SUBCKT cap_drv VDD VSS ctrl<2> ctrl<1> ctrl<0> out vref<2> vref<1> vref<0>
+*.PININFO VDD:B VSS:B ctrl<2>:B ctrl<1>:B ctrl<0>:B out:B vref<2>:B vref<1>:B
+*+ vref<0>:B
+XM VSS out ctrl<1> vref<1> / nmos4_standard l=150n nf=32 w=420n
+XN VSS out ctrl<0> vref<0> / nmos4_standard l=150n nf=32 w=420n
+XP VDD out ctrl<2> vref<2> / pmos4_standard l=150n nf=32 w=420n
+.ENDS
+
+
+.SUBCKT cdac_array_bot ctrl_m<8> ctrl_m<7> ctrl_m<6> ctrl_m<5> ctrl_m<4>
++ ctrl_m<3> ctrl_m<2> ctrl_m<1> ctrl_m<0> ctrl_n<8> ctrl_n<7> ctrl_n<6>
++ ctrl_n<5> ctrl_n<4> ctrl_n<3> ctrl_n<2> ctrl_n<1> ctrl_n<0> ctrl_p<8>
++ ctrl_p<7> ctrl_p<6> ctrl_p<5> ctrl_p<4> ctrl_p<3> ctrl_p<2> ctrl_p<1>
++ ctrl_p<0> ctrl_s VDD VSS bot<8> bot<7> bot<6> bot<5> bot<4> bot<3> bot<2>
++ bot<1> bot<0> top vref<2> vref<1> vref<0>
+*.PININFO ctrl_m<8>:I ctrl_m<7>:I ctrl_m<6>:I ctrl_m<5>:I ctrl_m<4>:I
+*+ ctrl_m<3>:I ctrl_m<2>:I ctrl_m<1>:I ctrl_m<0>:I ctrl_n<8>:I ctrl_n<7>:I
+*+ ctrl_n<6>:I ctrl_n<5>:I ctrl_n<4>:I ctrl_n<3>:I ctrl_n<2>:I ctrl_n<1>:I
+*+ ctrl_n<0>:I ctrl_p<8>:I ctrl_p<7>:I ctrl_p<6>:I ctrl_p<5>:I ctrl_p<4>:I
+*+ ctrl_p<3>:I ctrl_p<2>:I ctrl_p<1>:I ctrl_p<0>:I ctrl_s:I VDD:B VSS:B bot<8>:B
+*+ bot<7>:B bot<6>:B bot<5>:B bot<4>:B bot<3>:B bot<2>:B bot<1>:B bot<0>:B top:B
+*+ vref<2>:B vref<1>:B vref<0>:B
+XCAP0 bot<0> top / mim_34 num_cols=1 num_rows=1 unit_height=2u unit_width=2u
+XCAP1 bot<1> top / mim_34 num_cols=2 num_rows=1 unit_height=2u unit_width=2u
+XCAP2 bot<2> top / mim_34 num_cols=3 num_rows=1 unit_height=2u unit_width=2u
+XCAP3 bot<3> top / mim_34 num_cols=3 num_rows=2 unit_height=2u unit_width=2u
+XCAP4 bot<4> top / mim_34 num_cols=4 num_rows=3 unit_height=2u unit_width=2u
+XCAP5 bot<5> top / mim_34 num_cols=4 num_rows=5 unit_height=2u unit_width=2u
+XCAP6_1 bot<6> top / mim_34 num_cols=3 num_rows=6 unit_height=2u unit_width=2u
+XCAP6_0 bot<6> top / mim_34 num_cols=3 num_rows=6 unit_height=2u unit_width=2u
+XCAP7_1 bot<7> top / mim_34 num_cols=4 num_rows=8 unit_height=2u unit_width=2u
+XCAP7_0 bot<7> top / mim_34 num_cols=4 num_rows=8 unit_height=2u unit_width=2u
+XCAP8_1 bot<8> top / mim_34 num_cols=4 num_rows=14 unit_height=2u unit_width=2u
+XCAP8_0 bot<8> top / mim_34 num_cols=4 num_rows=14 unit_height=2u unit_width=2u
+XCAP_CM vref<1> top / mim_34 num_cols=1 num_rows=1 unit_height=2u unit_width=2u
+XCAP_CM_DUM cm_dum_bot cm_dum_top / mim_34 num_cols=3 num_rows=1 unit_height=2u
++ unit_width=2u
+XCAP_DUM00 dum_bot00 dum_top00 / mim_34 num_cols=3 num_rows=1 unit_height=2u
++ unit_width=2u
+XCAP_DUM10 dum_bot10 dum_top10 / mim_34 num_cols=2 num_rows=1 unit_height=2u
++ unit_width=2u
+XCAP_DUM20 dum_bot20 dum_top20 / mim_34 num_cols=1 num_rows=1 unit_height=2u
++ unit_width=2u
+XCAP_DUM30 dum_bot30 dum_top30 / mim_34 num_cols=1 num_rows=2 unit_height=2u
++ unit_width=2u
+XCAP_DUM60 dum_bot60 dum_top60 / mim_34 num_cols=1 num_rows=6 unit_height=2u
++ unit_width=2u
+XCAP_DUM61 dum_bot61 dum_top61 / mim_34 num_cols=1 num_rows=6 unit_height=2u
++ unit_width=2u
+XDRV0 VDD VSS ctrl_n<0> ctrl_m<0> ctrl_p<0> bot<0> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV1 VDD VSS ctrl_n<1> ctrl_m<1> ctrl_p<1> bot<1> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV2 VDD VSS ctrl_n<2> ctrl_m<2> ctrl_p<2> bot<2> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV3 VDD VSS ctrl_n<3> ctrl_m<3> ctrl_p<3> bot<3> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV4 VDD VSS ctrl_n<4> ctrl_m<4> ctrl_p<4> bot<4> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV5_1 VDD VSS ctrl_n<5> ctrl_m<5> ctrl_p<5> bot<5> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV5_0 VDD VSS ctrl_n<5> ctrl_m<5> ctrl_p<5> bot<5> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_7 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_6 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_5 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_4 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_3 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_2 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_1 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV6_0 VDD VSS ctrl_n<6> ctrl_m<6> ctrl_p<6> bot<6> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_7 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_6 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_5 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_4 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_3 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_2 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_1 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV7_0 VDD VSS ctrl_n<7> ctrl_m<7> ctrl_p<7> bot<7> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_15 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_14 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_13 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_12 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_11 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_10 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_9 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_8 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_7 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_6 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_5 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_4 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_3 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_2 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_1 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+XDRV8_0 VDD VSS ctrl_n<8> ctrl_m<8> ctrl_p<8> bot<8> vref<2> vref<1> vref<0> /
++ cap_drv
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg16 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=16 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg16 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=16 w=550n
+.ENDS
+
+
+.SUBCKT inv_3 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg16
+XP VDD out in VDD / pmos4_standard_w110_l30_seg16
+.ENDS
+
+
+.SUBCKT inv_chain_1 in out outb VDD VSS
+*.PININFO in:I out:O outb:O VDD:B VSS:B
+XINV0 in outb VDD VSS / inv_2
+XINV1 outb out VDD VSS / inv_3
+.ENDS
+
+
+.SUBCKT inv_chain_2 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XINV0 in outb VDD VSS / inv_2
+XINV1 outb out VDD VSS / inv
+.ENDS
+
+
+.SUBCKT inv_chain_3 in out outb VDD VSS
+*.PININFO in:I out:O outb:O VDD:B VSS:B
+XINV0 in mid<0> VDD VSS / inv_2
+XINV1 mid<0> out VDD VSS / inv
+XINV2 out outb VDD VSS / inv
+.ENDS
+
+
+.SUBCKT inv_8 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg16
+XP VDD out in VDD / pmos4_standard_w110_l30_seg16
+.ENDS
+
+
+.SUBCKT nmos4_standard_stack2_w84_l30_seg4 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XN_3 b m<3> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_2 b m<2> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_1 b m<1> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_0 b m<0> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_7 b d g<1> m<3> / nmos4_standard l=150n nf=1 w=420n
+XN_6 b d g<1> m<2> / nmos4_standard l=150n nf=1 w=420n
+XN_5 b d g<1> m<1> / nmos4_standard l=150n nf=1 w=420n
+XN_4 b d g<1> m<0> / nmos4_standard l=150n nf=1 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_stack2_w110_l30_seg4 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XP_3 b m<3> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_2 b m<2> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_1 b m<1> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_0 b m<0> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_7 b d g<1> m<3> / pmos4_standard l=150n nf=1 w=550n
+XP_6 b d g<1> m<2> / pmos4_standard l=150n nf=1 w=550n
+XP_5 b d g<1> m<1> / pmos4_standard l=150n nf=1 w=550n
+XP_4 b d g<1> m<0> / pmos4_standard l=150n nf=1 w=550n
+.ENDS
+
+
+.SUBCKT inv_tristate_3 en enb in out VDD VSS
+*.PININFO en:I enb:I in:I out:O VDD:B VSS:B
+XN VSS out en in VSS / nmos4_standard_stack2_w84_l30_seg4
+XP VDD out enb in VDD / pmos4_standard_stack2_w110_l30_seg4
+.ENDS
+
+
+.SUBCKT latch_2 clk clkb in out VDD VSS
+*.PININFO clk:I clkb:I in:I out:O VDD:B VSS:B
+XBUF outb out VDD VSS / inv_8
+XCM fb inb outb NC / current_summer
+XTBUF clk clkb in inb VDD VSS / inv_tristate_3
+XTFB clkb clk out fb VDD VSS / inv_tristate
+.ENDS
+
+
+.SUBCKT flop_1 clk in out VDD VSS
+*.PININFO clk:I in:I out:O VDD:B VSS:B
+XB clk clkb VDD VSS / inv_6
+XM clkb clk in mid VDD VSS / latch
+XS clk clkb mid out VDD VSS / latch_2
+.ENDS
+
+
+.SUBCKT nmos4_standard_w84_l30_seg3 b d g s
+*.PININFO b:B d:B g:B s:B
+XN b d g s / nmos4_standard l=150n nf=3 w=420n
+.ENDS
+
+
+.SUBCKT pmos4_standard_w110_l30_seg3 b d g s
+*.PININFO b:B d:B g:B s:B
+XP b d g s / pmos4_standard l=150n nf=3 w=550n
+.ENDS
+
+
+.SUBCKT inv_7 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg3
+XP VDD out in VDD / pmos4_standard_w110_l30_seg3
+.ENDS
+
+
+.SUBCKT nor3 in<2> in<1> in<0> out VDD VSS
+*.PININFO in<2>:I in<1>:I in<0>:I out:O VDD:B VSS:B
+XN_2 VSS out in<2> VSS / nmos4_standard_w84_l30_seg2
+XN_1 VSS out in<1> VSS / nmos4_standard_w84_l30_seg2
+XN_0 VSS out in<0> VSS / nmos4_standard_w84_l30_seg2
+XP_0 VDD pmid<0> in<0> VDD / pmos4_standard_w110_l30_seg2
+XP_1 VDD pmid<1> in<1> pmid<0> / pmos4_standard_w110_l30_seg2
+XP_2 VDD out in<2> pmid<1> / pmos4_standard_w110_l30_seg2
+.ENDS
+
+
+.SUBCKT pmos4_standard_stack2_w110_l30_seg8 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XP_15 b d g<1> m<7> / pmos4_standard l=150n nf=1 w=550n
+XP_14 b d g<1> m<6> / pmos4_standard l=150n nf=1 w=550n
+XP_13 b d g<1> m<5> / pmos4_standard l=150n nf=1 w=550n
+XP_12 b d g<1> m<4> / pmos4_standard l=150n nf=1 w=550n
+XP_11 b d g<1> m<3> / pmos4_standard l=150n nf=1 w=550n
+XP_10 b d g<1> m<2> / pmos4_standard l=150n nf=1 w=550n
+XP_9 b d g<1> m<1> / pmos4_standard l=150n nf=1 w=550n
+XP_8 b d g<1> m<0> / pmos4_standard l=150n nf=1 w=550n
+XP_7 b m<7> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_6 b m<6> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_5 b m<5> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_4 b m<4> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_3 b m<3> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_2 b m<2> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_1 b m<1> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_0 b m<0> g<0> s / pmos4_standard l=150n nf=1 w=550n
+.ENDS
+
+
+.SUBCKT oai in<3> in<2> in<1> in<0> out VDD VSS
+*.PININFO in<3>:I in<2>:I in<1>:I in<0>:I out:O VDD:B VSS:B
+XN0 VSS out in<3> nmid / nmos4_standard l=150n nf=4 w=420n
+XN1 VSS out in<2> nmid / nmos4_standard l=150n nf=4 w=420n
+XN2 VSS nmid in<1> VSS / nmos4_standard l=150n nf=4 w=420n
+XN3 VSS nmid in<0> VSS / nmos4_standard l=150n nf=4 w=420n
+XP0 VDD out in<1> in<0> VDD / pmos4_standard_stack2_w110_l30_seg4
+XP1 VDD out in<3> in<2> VDD / pmos4_standard_stack2_w110_l30_seg8
+.ENDS
+
+
+.SUBCKT passgate en enb s d VDD VSS
+*.PININFO en:I enb:I s:I d:O VDD:B VSS:B
+XN VSS d en s / nmos4_standard l=150n nf=7 w=420n
+XP VDD d enb s / pmos4_standard l=150n nf=7 w=550n
+.ENDS
+
+
+.SUBCKT pmos4_standard_stack2_w110_l30_seg16 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XP_15 b m<15> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_14 b m<14> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_13 b m<13> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_12 b m<12> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_11 b m<11> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_10 b m<10> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_9 b m<9> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_8 b m<8> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_7 b m<7> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_6 b m<6> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_5 b m<5> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_4 b m<4> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_3 b m<3> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_2 b m<2> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_1 b m<1> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_0 b m<0> g<0> s / pmos4_standard l=150n nf=1 w=550n
+XP_31 b d g<1> m<15> / pmos4_standard l=150n nf=1 w=550n
+XP_30 b d g<1> m<14> / pmos4_standard l=150n nf=1 w=550n
+XP_29 b d g<1> m<13> / pmos4_standard l=150n nf=1 w=550n
+XP_28 b d g<1> m<12> / pmos4_standard l=150n nf=1 w=550n
+XP_27 b d g<1> m<11> / pmos4_standard l=150n nf=1 w=550n
+XP_26 b d g<1> m<10> / pmos4_standard l=150n nf=1 w=550n
+XP_25 b d g<1> m<9> / pmos4_standard l=150n nf=1 w=550n
+XP_24 b d g<1> m<8> / pmos4_standard l=150n nf=1 w=550n
+XP_23 b d g<1> m<7> / pmos4_standard l=150n nf=1 w=550n
+XP_22 b d g<1> m<6> / pmos4_standard l=150n nf=1 w=550n
+XP_21 b d g<1> m<5> / pmos4_standard l=150n nf=1 w=550n
+XP_20 b d g<1> m<4> / pmos4_standard l=150n nf=1 w=550n
+XP_19 b d g<1> m<3> / pmos4_standard l=150n nf=1 w=550n
+XP_18 b d g<1> m<2> / pmos4_standard l=150n nf=1 w=550n
+XP_17 b d g<1> m<1> / pmos4_standard l=150n nf=1 w=550n
+XP_16 b d g<1> m<0> / pmos4_standard l=150n nf=1 w=550n
+.ENDS
+
+
+.SUBCKT nor2_1 in<1> in<0> out VDD VSS
+*.PININFO in<1>:I in<0>:I out:O VDD:B VSS:B
+XN_1 VSS out in<1> VSS / nmos4_standard_w84_l30_seg16
+XN_0 VSS out in<0> VSS / nmos4_standard_w84_l30_seg16
+XP VDD out in<1> in<0> VDD / pmos4_standard_stack2_w110_l30_seg16
+.ENDS
+
+
+.SUBCKT inv_tristate_6 en enb in out VDD VSS
+*.PININFO en:I enb:I in:I out:O VDD:B VSS:B
+XN VSS out en in VSS / nmos4_standard_stack2_w84_l30_seg4
+XP VDD out enb in VDD / pmos4_standard_stack2_w110_l30_seg4
+.ENDS
+
+
+.SUBCKT rst_latch_1 clk clkb in rst out VDD VSS
+*.PININFO clk:I clkb:I in:I rst:I out:O VDD:B VSS:B
+XCM fb inb outb NC / current_summer
+XNOR outb rst out VDD VSS / nor2_1
+XTBUF clk clkb in inb VDD VSS / inv_tristate_6
+XTFB clkb clk out fb VDD VSS / inv_tristate_4
+.ENDS
+
+
+.SUBCKT rst_flop clk in rst out VDD VSS
+*.PININFO clk:I in:I rst:I out:O VDD:B VSS:B
+XB clk clkb VDD VSS / inv_2
+XM clkb clk in rst mid VDD VSS / rst_latch
+XS clk clkb mid rst out VDD VSS / rst_latch_1
+.ENDS
+
+
+.SUBCKT sar_logic_unit_bot_sync bit comp_clk comp_n comp_p rst bit_nxt dm dn
++ dn_b dp dp_b out_ret VDD VSS
+*.PININFO bit:I comp_clk:I comp_n:I comp_p:I rst:I bit_nxt:O dm:O dn:O dn_b:O
+*+ dp:O dp_b:O out_ret:O VDD:B VSS:B
+XBUF_M dm_mid dm VDD VSS / inv_chain_2
+XBUF_N dn_mid dn_m dn_b VDD VSS / inv_chain_3
+XBUF_P dp_mid dp_m dp_b VDD VSS / inv_chain_3
+XFLOP comp_clkb dp_m out_ret VDD VSS / flop_1
+XINV_CLK comp_clk comp_clkb VDD VSS / inv_9
+XINV_DONE bit_mid done_inv VDD VSS / inv_9
+XINV_N_MID dn_mid dn_mid_fb VDD VSS / inv_7
+XINV_P_MID dp_mid dp_mid_fb VDD VSS / inv_7
+XNAND_DONE dp_mid_fb dn_mid_fb bit_mid VDD VSS / nand2
+XNAND_STATE bit done_inv write VDD VSS / nand2
+XNOR rst dn_mid dp_mid dm_mid VDD VSS / nor3
+XOAI_N dn_mid_fb rst comp_n write dn_mid VDD VSS / oai
+XOAI_P dp_mid_fb rst comp_p write dp_mid VDD VSS / oai
+XPG_N VDD VSS dn dn_m VDD VSS / passgate
+XPG_P VDD VSS dp dp_m VDD VSS / passgate
+XRFLOP comp_clkb bit rst bit_nxt VDD VSS / rst_flop
+.ENDS
+
+
+.SUBCKT inv_5 in out VDD VSS
+*.PININFO in:I out:O VDD:B VSS:B
+XN VSS out in VSS / nmos4_standard_w84_l30_seg32
+XP VDD out in VDD / pmos4_standard_w110_l30_seg32
+.ENDS
+
+
+.SUBCKT nmos4_standard_stack2_w84_l30_seg8 b d g<1> g<0> s
+*.PININFO b:B d:B g<1>:B g<0>:B s:B
+XN_15 b d g<1> m<7> / nmos4_standard l=150n nf=1 w=420n
+XN_14 b d g<1> m<6> / nmos4_standard l=150n nf=1 w=420n
+XN_13 b d g<1> m<5> / nmos4_standard l=150n nf=1 w=420n
+XN_12 b d g<1> m<4> / nmos4_standard l=150n nf=1 w=420n
+XN_11 b d g<1> m<3> / nmos4_standard l=150n nf=1 w=420n
+XN_10 b d g<1> m<2> / nmos4_standard l=150n nf=1 w=420n
+XN_9 b d g<1> m<1> / nmos4_standard l=150n nf=1 w=420n
+XN_8 b d g<1> m<0> / nmos4_standard l=150n nf=1 w=420n
+XN_7 b m<7> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_6 b m<6> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_5 b m<5> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_4 b m<4> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_3 b m<3> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_2 b m<2> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_1 b m<1> g<0> s / nmos4_standard l=150n nf=1 w=420n
+XN_0 b m<0> g<0> s / nmos4_standard l=150n nf=1 w=420n
+.ENDS
+
+
+.SUBCKT inv_tristate_2 en enb in out VDD VSS
+*.PININFO en:I enb:I in:I out:O VDD:B VSS:B
+XN VSS out en in VSS / nmos4_standard_stack2_w84_l30_seg8
+XP VDD out enb in VDD / pmos4_standard_stack2_w110_l30_seg8
+.ENDS
+
+
+.SUBCKT latch_1 clk clkb in out VDD VSS
+*.PININFO clk:I clkb:I in:I out:O VDD:B VSS:B
+XBUF outb out VDD VSS / inv_5
+XCM fb inb outb NC / current_summer
+XTBUF clk clkb in inb VDD VSS / inv_tristate_2
+XTFB clkb clk out fb VDD VSS / inv_tristate_3
+.ENDS
+
+
+.SUBCKT flop clk in out VDD VSS
+*.PININFO clk:I in:I out:O VDD:B VSS:B
+XB clk clkb VDD VSS / inv_6
+XM clkb clk in mid VDD VSS / latch
+XS clk clkb mid out VDD VSS / latch_1
+.ENDS
+
+
+.SUBCKT sar_logic_array_sync comp_n comp_p rst sar_clk clk_out data_out<9>
++ data_out<8> data_out<7> data_out<6> data_out<5> data_out<4> data_out<3>
++ data_out<2> data_out<1> data_out<0> dm<9> dm<8> dm<7> dm<6> dm<5> dm<4> dm<3>
++ dm<2> dm<1> dm<0> dn<9> dn<8> dn<7> dn<6> dn<5> dn<4> dn<3> dn<2> dn<1> dn<0>
++ dn_b<9> dn_b<8> dn_b<7> dn_b<6> dn_b<5> dn_b<4> dn_b<3> dn_b<2> dn_b<1>
++ dn_b<0> dp<9> dp<8> dp<7> dp<6> dp<5> dp<4> dp<3> dp<2> dp<1> dp<0> dp_b<9>
++ dp_b<8> dp_b<7> dp_b<6> dp_b<5> dp_b<4> dp_b<3> dp_b<2> dp_b<1> dp_b<0>
++ state<9> state<8> state<7> state<6> state<5> state<4> state<3> state<2>
++ state<1> state<0> VDD VSS
+*.PININFO comp_n:I comp_p:I rst:I sar_clk:I clk_out:O data_out<9>:O
+*+ data_out<8>:O data_out<7>:O data_out<6>:O data_out<5>:O data_out<4>:O
+*+ data_out<3>:O data_out<2>:O data_out<1>:O data_out<0>:O dm<9>:O dm<8>:O
+*+ dm<7>:O dm<6>:O dm<5>:O dm<4>:O dm<3>:O dm<2>:O dm<1>:O dm<0>:O dn<9>:O
+*+ dn<8>:O dn<7>:O dn<6>:O dn<5>:O dn<4>:O dn<3>:O dn<2>:O dn<1>:O dn<0>:O
+*+ dn_b<9>:O dn_b<8>:O dn_b<7>:O dn_b<6>:O dn_b<5>:O dn_b<4>:O dn_b<3>:O
+*+ dn_b<2>:O dn_b<1>:O dn_b<0>:O dp<9>:O dp<8>:O dp<7>:O dp<6>:O dp<5>:O dp<4>:O
+*+ dp<3>:O dp<2>:O dp<1>:O dp<0>:O dp_b<9>:O dp_b<8>:O dp_b<7>:O dp_b<6>:O
+*+ dp_b<5>:O dp_b<4>:O dp_b<3>:O dp_b<2>:O dp_b<1>:O dp_b<0>:O state<9>:O
+*+ state<8>:O state<7>:O state<6>:O state<5>:O state<4>:O state<3>:O state<2>:O
+*+ state<1>:O state<0>:O VDD:B VSS:B
+XBUF_CLK rst clk_mid clk_mid_b VDD VSS / inv_chain_1
+XBUF_OUT clk_mid clk_out net01 VDD VSS / inv_chain_1
+XFLOP_OUT_9 clk_mid out_ret<9> data_out<9> VDD VSS / flop
+XFLOP_OUT_8 clk_mid out_ret<8> data_out<8> VDD VSS / flop
+XFLOP_OUT_7 clk_mid out_ret<7> data_out<7> VDD VSS / flop
+XFLOP_OUT_6 clk_mid out_ret<6> data_out<6> VDD VSS / flop
+XFLOP_OUT_5 clk_mid out_ret<5> data_out<5> VDD VSS / flop
+XFLOP_OUT_4 clk_mid out_ret<4> data_out<4> VDD VSS / flop
+XFLOP_OUT_3 clk_mid out_ret<3> data_out<3> VDD VSS / flop
+XFLOP_OUT_2 clk_mid out_ret<2> data_out<2> VDD VSS / flop
+XFLOP_OUT_1 clk_mid out_ret<1> data_out<1> VDD VSS / flop
+XFLOP_OUT_0 clk_mid out_ret<0> data_out<0> VDD VSS / flop
+XLOGIC0 clk_mid_b sar_clk comp_n comp_p rst state<9> dm<9> dn<9> dn_b<9> dp<9>
++ dp_b<9> out_ret<9> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC1 state<9> sar_clk comp_n comp_p rst state<8> dm<8> dn<8> dn_b<8> dp<8>
++ dp_b<8> out_ret<8> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC2 state<8> sar_clk comp_n comp_p rst state<7> dm<7> dn<7> dn_b<7> dp<7>
++ dp_b<7> out_ret<7> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC3 state<7> sar_clk comp_n comp_p rst state<6> dm<6> dn<6> dn_b<6> dp<6>
++ dp_b<6> out_ret<6> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC4 state<6> sar_clk comp_n comp_p rst state<5> dm<5> dn<5> dn_b<5> dp<5>
++ dp_b<5> out_ret<5> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC5 state<5> sar_clk comp_n comp_p rst state<4> dm<4> dn<4> dn_b<4> dp<4>
++ dp_b<4> out_ret<4> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC6 state<4> sar_clk comp_n comp_p rst state<3> dm<3> dn<3> dn_b<3> dp<3>
++ dp_b<3> out_ret<3> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC7 state<3> sar_clk comp_n comp_p rst state<2> dm<2> dn<2> dn_b<2> dp<2>
++ dp_b<2> out_ret<2> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC8 state<2> sar_clk comp_n comp_p rst state<1> dm<1> dn<1> dn_b<1> dp<1>
++ dp_b<1> out_ret<1> VDD VSS / sar_logic_unit_bot_sync
+XLOGIC9 state<1> sar_clk comp_n comp_p rst state<0> dm<0> dn<0> dn_b<0> dp<0>
++ dp_b<0> out_ret<0> VDD VSS / sar_logic_unit_bot_sync
+.ENDS
+
+
+.SUBCKT sar_slice_bot_sync bot_n<8> bot_n<7> bot_n<6> bot_n<5> bot_n<4> bot_n<3>
++ bot_n<2> bot_n<1> bot_n<0> bot_p<8> bot_p<7> bot_p<6> bot_p<5> bot_p<4>
++ bot_p<3> bot_p<2> bot_p<1> bot_p<0> clk clk16 clk16_b osn osp clk_out comp_clk
++ comp_n comp_p data_out<9> data_out<8> data_out<7> data_out<6> data_out<5>
++ data_out<4> data_out<3> data_out<2> data_out<1> data_out<0> dm<9> dm<8> dm<7>
++ dm<6> dm<5> dm<4> dm<3> dm<2> dm<1> dm<0> dn<9> dn<8> dn<7> dn<6> dn<5> dn<4>
++ dn<3> dn<2> dn<1> dn<0> done dp<9> dp<8> dp<7> dp<6> dp<5> dp<4> dp<3> dp<2>
++ dp<1> dp<0> VDD VSS top_n top_p vref<2> vref<1> vref<0>
+*.PININFO bot_n<8>:I bot_n<7>:I bot_n<6>:I bot_n<5>:I bot_n<4>:I bot_n<3>:I
+*+ bot_n<2>:I bot_n<1>:I bot_n<0>:I bot_p<8>:I bot_p<7>:I bot_p<6>:I bot_p<5>:I
+*+ bot_p<4>:I bot_p<3>:I bot_p<2>:I bot_p<1>:I bot_p<0>:I clk:I clk16:I clk16_b:I
+*+ osn:I osp:I clk_out:O comp_clk:O comp_n:O comp_p:O data_out<9>:O data_out<8>:O
+*+ data_out<7>:O data_out<6>:O data_out<5>:O data_out<4>:O data_out<3>:O
+*+ data_out<2>:O data_out<1>:O data_out<0>:O dm<9>:O dm<8>:O dm<7>:O dm<6>:O
+*+ dm<5>:O dm<4>:O dm<3>:O dm<2>:O dm<1>:O dm<0>:O dn<9>:O dn<8>:O dn<7>:O
+*+ dn<6>:O dn<5>:O dn<4>:O dn<3>:O dn<2>:O dn<1>:O dn<0>:O done:O dp<9>:O dp<8>:O
+*+ dp<7>:O dp<6>:O dp<5>:O dp<4>:O dp<3>:O dp<2>:O dp<1>:O dp<0>:O VDD:B VSS:B
+*+ top_n:B top_p:B vref<2>:B vref<1>:B vref<0>:B
+XCLK clk clk16_b clk16 comp_clk comp_clkb VDD VSS / sar_sync_counter
+XCOMP comp_clk net1 top_p top_n osn osp comp_n comp_n_m comp_p comp_p_m VDD VSS
++ / sar_comp
+XDACN dm<9> dm<8> dm<7> dm<6> dm<5> dm<4> dm<3> dm<2> dm<1> dp_b<9> dp_b<8>
++ dp_b<7> dp_b<6> dp_b<5> dp_b<4> dp_b<3> dp_b<2> dp_b<1> dn<9> dn<8> dn<7>
++ dn<6> dn<5> dn<4> dn<3> dn<2> dn<1> clk16 VDD VSS bot_n<8> bot_n<7> bot_n<6>
++ bot_n<5> bot_n<4> bot_n<3> bot_n<2> bot_n<1> bot_n<0> top_n vref<2> vref<1>
++ vref<0> / cdac_array_bot
+XDACP dm<9> dm<8> dm<7> dm<6> dm<5> dm<4> dm<3> dm<2> dm<1> dn_b<9> dn_b<8>
++ dn_b<7> dn_b<6> dn_b<5> dn_b<4> dn_b<3> dn_b<2> dn_b<1> dp<9> dp<8> dp<7>
++ dp<6> dp<5> dp<4> dp<3> dp<2> dp<1> clk16 VDD VSS bot_p<8> bot_p<7> bot_p<6>
++ bot_p<5> bot_p<4> bot_p<3> bot_p<2> bot_p<1> bot_p<0> top_p vref<2> vref<1>
++ vref<0> / cdac_array_bot
+XLOGIC comp_n comp_p clk16 comp_clk clk_out data_out<9> data_out<8> data_out<7>
++ data_out<6> data_out<5> data_out<4> data_out<3> data_out<2> data_out<1>
++ data_out<0> dm<9> dm<8> dm<7> dm<6> dm<5> dm<4> dm<3> dm<2> dm<1> dm<0> dn<9>
++ dn<8> dn<7> dn<6> dn<5> dn<4> dn<3> dn<2> dn<1> dn<0> dn_b<9> dn_b<8> dn_b<7>
++ dn_b<6> dn_b<5> dn_b<4> dn_b<3> dn_b<2> dn_b<1> dn_b<0> dp<9> dp<8> dp<7>
++ dp<6> dp<5> dp<4> dp<3> dp<2> dp<1> dp<0> dp_b<9> dp_b<8> dp_b<7> dp_b<6>
++ dp_b<5> dp_b<4> dp_b<3> dp_b<2> dp_b<1> dp_b<0> state<9> state<8> state<7>
++ state<6> state<5> state<4> state<3> state<2> state<1> state<0> VDD VSS /
++ sar_logic_array_sync
+.ENDS
+
+
+.SUBCKT AAA_Slice_sync clk clk_b in_n in_p clk16 clk16_b clk_out comp_clk comp_n
++ comp_p data_out<9> data_out<8> data_out<7> data_out<6> data_out<5> data_out<4>
++ data_out<3> data_out<2> data_out<1> data_out<0> dm<9> dm<8> dm<7> dm<6> dm<5>
++ dm<4> dm<3> dm<2> dm<1> dm<0> dn<9> dn<8> dn<7> dn<6> dn<5> dn<4> dn<3> dn<2>
++ dn<1> dn<0> dp<9> dp<8> dp<7> dp<6> dp<5> dp<4> dp<3> dp<2> dp<1> dp<0> vg_cm
++ vg_n vg_p VDD VSS bot_n<8> bot_n<7> bot_n<6> bot_n<5> bot_n<4> bot_n<3>
++ bot_n<2> bot_n<1> bot_n<0> bot_p<8> bot_p<7> bot_p<6> bot_p<5> bot_p<4>
++ bot_p<3> bot_p<2> bot_p<1> bot_p<0> top_n top_p vref<2> vref<1> vref<0>
+*.PININFO clk:I clk_b:I in_n:I in_p:I clk16:O clk16_b:O clk_out:O comp_clk:O
+*+ comp_n:O comp_p:O data_out<9>:O data_out<8>:O data_out<7>:O data_out<6>:O
+*+ data_out<5>:O data_out<4>:O data_out<3>:O data_out<2>:O data_out<1>:O
+*+ data_out<0>:O dm<9>:O dm<8>:O dm<7>:O dm<6>:O dm<5>:O dm<4>:O dm<3>:O dm<2>:O
+*+ dm<1>:O dm<0>:O dn<9>:O dn<8>:O dn<7>:O dn<6>:O dn<5>:O dn<4>:O dn<3>:O
+*+ dn<2>:O dn<1>:O dn<0>:O dp<9>:O dp<8>:O dp<7>:O dp<6>:O dp<5>:O dp<4>:O
+*+ dp<3>:O dp<2>:O dp<1>:O dp<0>:O vg_cm:O vg_n:O vg_p:O VDD:B VSS:B bot_n<8>:B
+*+ bot_n<7>:B bot_n<6>:B bot_n<5>:B bot_n<4>:B bot_n<3>:B bot_n<2>:B bot_n<1>:B
+*+ bot_n<0>:B bot_p<8>:B bot_p<7>:B bot_p<6>:B bot_p<5>:B bot_p<4>:B bot_p<3>:B
+*+ bot_p<2>:B bot_p<1>:B bot_p<0>:B top_n:B top_p:B vref<2>:B vref<1>:B vref<0>:B
+XSAM clk16 clk16_b in_n in_p vg_cm vg_n vg_p VDD VSS bot_n<8> bot_n<7> bot_n<6>
++ bot_n<5> bot_n<4> bot_n<3> bot_n<2> bot_n<1> bot_n<0> top_n bot_p<8> bot_p<7>
++ bot_p<6> bot_p<5> bot_p<4> bot_p<3> bot_p<2> bot_p<1> bot_p<0> top_p vref<1> /
++ sampler_top
+XSAR bot_n<8> bot_n<7> bot_n<6> bot_n<5> bot_n<4> bot_n<3> bot_n<2> bot_n<1>
++ bot_n<0> bot_p<8> bot_p<7> bot_p<6> bot_p<5> bot_p<4> bot_p<3> bot_p<2>
++ bot_p<1> bot_p<0> clk clk16 clk16_b osn osp clk_out comp_clk comp_n comp_p
++ data_out<9> data_out<8> data_out<7> data_out<6> data_out<5> data_out<4>
++ data_out<3> data_out<2> data_out<1> data_out<0> dm<9> dm<8> dm<7> dm<6> dm<5>
++ dm<4> dm<3> dm<2> dm<1> dm<0> dn<9> dn<8> dn<7> dn<6> dn<5> dn<4> dn<3> dn<2>
++ dn<1> dn<0> done dp<9> dp<8> dp<7> dp<6> dp<5> dp<4> dp<3> dp<2> dp<1> dp<0>
++ VDD VSS top_n top_p vref<2> vref<1> vref<0> / sar_slice_bot_sync
+.ENDS
