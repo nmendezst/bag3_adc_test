@@ -345,7 +345,7 @@ ValueError: /home/nmendez/asic/bag3_skywater130_workspace/skywater130/gds_setup/
 
 ```
 
-There is an open source version of the layermap file (thanks to Felicia Guo)
+There is an open source version of the layermap file ([thanks to Felicia Guo](https://open-source-silicon.slack.com/archives/C016HUV935L/p1717040627916339?thread_ts=1716649165.989099&cid=C016HUV935L))
 
 ```bash
 
@@ -354,6 +354,27 @@ git fetch
 git pull origin open
 
 ```
+
+```bash
+WARNING: Error registering BLOSC filter for HDF5.  Default to LZF
+creating BAG project
+*WARNING* invalid literal for int() with base 10: ''.  Operating without Virtuoso.
+computing layout...
+[2024-05-30 13:45:50.786] [STDCellWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-30 13:45:50.786] [STDCellWrapper] [warning] ports on private layer 0 detected, converting to primitive ports.
+[2024-05-30 13:45:50.786] [STDCellWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+[2024-05-30 13:45:50.786] [STDCellWrapper] [warning] ports on private layer 2 detected, converting to primitive ports.
+computation done.
+creating layout...
+layout done: time taken = 0.005554666000080033
+computing schematic...
+computation done.
+creating netlist...
+netlisting done: time taken = 0.03081732300006479
+```
+
+Output files are in `gen_outputs\inv_chain_sch`, there is a `.cdl` netlist, a `.gds` layout and a `.log` report.
+
 
 
 
