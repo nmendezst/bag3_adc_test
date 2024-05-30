@@ -345,6 +345,17 @@ ValueError: /home/nmendez/asic/bag3_skywater130_workspace/skywater130/gds_setup/
 
 ```
 
+There is an open source version of the layermap file (thanks to Felicia Guo)
+
+```bash
+
+cd skywater130
+git fetch
+git pull origin open
+
+```
+
+
 
 
 ### References
