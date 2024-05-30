@@ -395,11 +395,13 @@ top_cells[0].write_svg("AA_inv_chain.svg")
 In the `bag3_skywater130_workspace` directory:
 
 ```bash
+git clone https://github.com/ucb-art/bag3_sync_sar_adc
 
-git clone https://github.com/ucb-art/skywater130_bag3_sar_adc
-cd skywater130_bag3_sar_adc
-git submodule update --init --recursive
+```
 
+```bash
+cd data
+git clone https://github.com/ucb-art/bag3_sync_sar_adc_data_skywater130 bag3_sync_sar_adc
 ```
 
 
@@ -409,6 +411,8 @@ git submodule update --init --recursive
 #### Official documentation
 [BAG3++ 1.0 documentation](https://bag3-readthedocs.readthedocs.io/en/latest/)
 
+[BAG3 SAR ADC Setup](https://github.com/ucb-art/bag3_sync_sar_adc/blob/main/docs/source/setup.rst)
+
 [gdstk](https://heitzmann.github.io/gdstk/)
 
 
@@ -417,7 +421,10 @@ git submodule update --init --recursive
 
 [Skywater primitives for BAG](https://github.com/ucb-art/skywater-pdk-libs-sky130_bag3_pr/tree/d1979837776f4a8beddf0fd9cda3a2bb1dbb8d72)
 
+[BAG3 SAR ADC Generator](https://github.com/ucb-art/bag3_sync_sar_adc)
+
 [BAG3 SAR ADC Generator](https://github.com/ucb-art/skywater130_bag3_sar_adc)
+
 
 
 #### Collective wisdom of the ancients
