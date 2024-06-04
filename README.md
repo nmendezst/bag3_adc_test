@@ -632,6 +632,91 @@ Output files are in [`gen_outputs\bag3_sync_sar_adc/AAAA_SAR_lay_sky_check`](htt
 <img src="https://github.com/nmendezst/bag3_adc_test/blob/b22365b5a32257534b4df5bcc5ff6597e5788b59/AAA_Slice_sync.svg"  width=75% height=75%>
 
 
+<<<<<<< HEAD
+=======
+### 11. DRC check
+
+#### Magic
+
+```bash
+
+git clone https://github.com/RTimothyEdwards/magic/
+cd magic
+./configure
+make
+sudo make install
+
+```
+
+
+There are two ways to get the Skywater 130 PDK, `open_pdks` and `volare`.
+`open_pdks` are the source files, it contains **everything** (there are options to enable or disable different libraries) and has the most recent updates and fixes, but it has to be built (which takes some time) and it takes more space.
+
+`volare` is a Python package that retrieves pre-built versions, it's quite convenient to use, but currently doesn't have the combined SPICE models and can be outdated at times (which is a crucial drawback during tapeout deadlines).
+
+
+#### open_pdks
+
+```bash
+
+git clone https://github.com/RTimothyEdwards/open_pdks.git
+cd open_pdks
+./configure --enable-sky130-pdk --enable-sram-sky130
+make
+sudo make install
+make veryclean 
+
+```
+
+#### volare
+
+```bash
+# To install (or upgrade)
+python3 -m pip install --upgrade --no-cache-dir volare
+
+# To verify it works
+volare --version
+
+``` 
+
+To open `Magic` using the PDK managed by `volare`:
+
+```bash
+
+export PDK_ROOT=/home/$USER/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/
+magic -d XR -rcfile /$PDK_ROOT/sky130A/libs.tech/magic/sky130A.magicrc
+
+```
+
+In the console
+
+```tcl
+
+drc style drc(full)
+drc count
+
+
+There are 6946 error tiles
+
+```
+
+To view what rules are being affected
+
+```tcl
+
+drc why
+
+N-diff distance to P-tap must be < 15.0um (LU.2)
+P-diff distance to N-tap must be < 15.0um (LU.3)
+MiM cap bottom plate spacing < 1.2um (capm.2b)
+
+```
+
+
+
+
+
+>>>>>>> 8e7354d (Update README.md)
 ### References
 
 #### Official documentation
