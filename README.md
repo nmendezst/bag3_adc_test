@@ -632,7 +632,7 @@ Output files are in [`gen_outputs\bag3_sync_sar_adc/AAAA_SAR_lay_sky_check`](htt
 <img src="https://github.com/nmendezst/bag3_adc_test/blob/b22365b5a32257534b4df5bcc5ff6597e5788b59/AAA_Slice_sync.svg"  width=75% height=75%>
 
 
-<<<<<<< HEAD
+
 =======
 ### 11. DRC check
 
@@ -716,7 +716,7 @@ MiM cap bottom plate spacing < 1.2um (capm.2b)
 
 
 
->>>>>>> 8e7354d (Update README.md)
+
 ### References
 
 #### Official documentation
