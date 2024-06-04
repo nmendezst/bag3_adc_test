@@ -415,7 +415,7 @@ export PYTHONPATH="${PYTHONPATH}:${BAG_WORK_DIR}/bag3_sync_sar_adc/src"
 
 
 
-To generate an top level 8-bit SAR ADC:
+To generate a top level 8-bit SAR ADC:
 
 ```bash
 
@@ -632,8 +632,6 @@ Output files are in [`gen_outputs\bag3_sync_sar_adc/AAAA_SAR_lay_sky_check`](htt
 <img src="https://github.com/nmendezst/bag3_adc_test/blob/b22365b5a32257534b4df5bcc5ff6597e5788b59/AAA_Slice_sync.svg"  width=75% height=75%>
 
 
-
-=======
 ### 11. DRC check
 
 #### Magic
@@ -734,7 +732,7 @@ MiM cap bottom plate spacing < 1.2um (capm.2b)
 
 [BAG3 SAR ADC Generator](https://github.com/ucb-art/bag3_sync_sar_adc)
 
-[BAG3 SAR ADC Generator](https://github.com/ucb-art/skywater130_bag3_sar_adc)
+[Skywater 130 BAG3 SAR ADC Generator](https://github.com/ucb-art/skywater130_bag3_sar_adc)
 
 
 
