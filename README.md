@@ -386,7 +386,7 @@ top_cells[0].write_svg("AA_inv_chain.svg")
 ```
 
 
-<img src="https://github.com/nmendezst/bag3_adc_test/blob/08512f6f68c847fb9f52490dd249297b16a05caa/AA_inv_chain.svg"  width=75% height=75%>
+<img src="AA_inv_chain.svg"  width=75% height=75%>
 
 
 
@@ -415,7 +415,7 @@ export PYTHONPATH="${PYTHONPATH}:${BAG_WORK_DIR}/bag3_sync_sar_adc/src"
 
 
 
-To generate an top level 8-bit SAR ADC:
+To generate a top level 8-bit SAR ADC:
 
 ```bash
 
@@ -629,11 +629,9 @@ Output files are in [`gen_outputs\bag3_sync_sar_adc/AAAA_SAR_lay_sky_check`](htt
 
 
 
-<img src="https://github.com/nmendezst/bag3_adc_test/blob/b22365b5a32257534b4df5bcc5ff6597e5788b59/AAA_Slice_sync.svg"  width=75% height=75%>
+<img src="AAA_Slice_sync.png"  width=75% height=75%>
 
 
-
-=======
 ### 11. DRC check
 
 #### Magic
@@ -649,10 +647,10 @@ sudo make install
 ```
 
 
-There are two ways to get the Skywater 130 PDK, `open_pdks` and `volare`.
-`open_pdks` are the source files, it contains **everything** (there are options to enable or disable different libraries) and has the most recent updates and fixes, but it has to be built (which takes some time) and it takes more space.
+There are two ways to get the Skywater 130 PDK, `open_pdks` and `ciel`.
+[`open_pdks`](https://github.com/RTimothyEdwards/open_pdks/) are the source files, it contains **everything** (there are options to enable or disable different libraries) and has the most recent updates and fixes, but it has to be built (which takes some time) and it takes more space.
 
-`volare` is a Python package that retrieves pre-built versions, it's quite convenient to use, but currently doesn't have the combined SPICE models and can be outdated at times (which is a crucial drawback during tapeout deadlines).
+[`ciel`](https://pypi.org/project/ciel/) is a Python package that retrieves pre-built versions, it's quite convenient to use, but currently doesn't have the combined SPICE models and can be outdated at times (which is a crucial drawback during tapeout deadlines).
 
 
 #### open_pdks
@@ -668,23 +666,24 @@ make veryclean
 
 ```
 
-#### volare
+#### ciel
 
 ```bash
 # To install (or upgrade)
-python3 -m pip install --upgrade --no-cache-dir volare
+python3 -m pip install --user --upgrade --no-cache-dir ciel
 
 # To verify it works
-volare --version
+ciel --version
 
 ``` 
 
-To open `Magic` using the PDK managed by `volare`:
+To open `Magic` using the PDK managed by `ciel`:
 
 ```bash
 
-export PDK_ROOT=/home/$USER/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/
-magic -d XR -rcfile /$PDK_ROOT/sky130A/libs.tech/magic/sky130A.magicrc
+export PDK_ROOT=$HOME/.ciel
+export PDK=sky130A
+magic -d XR -rcfile $PDK_ROOT/$PDK/libs.tech/magic/sky130A.magicrc
 
 ```
 
@@ -734,7 +733,7 @@ MiM cap bottom plate spacing < 1.2um (capm.2b)
 
 [BAG3 SAR ADC Generator](https://github.com/ucb-art/bag3_sync_sar_adc)
 
-[BAG3 SAR ADC Generator](https://github.com/ucb-art/skywater130_bag3_sar_adc)
+[Skywater 130 BAG3 SAR ADC Generator](https://github.com/ucb-art/skywater130_bag3_sar_adc)
 
 
 
